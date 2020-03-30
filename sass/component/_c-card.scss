@@ -1,0 +1,28 @@
+$component-name: "c-card";
+
+.#{$component-name} {
+  display: flex;
+  flex-direction: column;
+  flex: 0.6;
+  justify-content: center;
+
+  &__title {
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+
+    &-emphasis {
+      display: inline-block;
+      flex: 1;
+      font-size: 210%;
+      font-weight: bold;
+      width: 100%;
+    }
+  }
+
+  &__explanation {
+    line-height: 1.6;
+    margin-bottom: 0;
+    margin-top: $global-module-size;
+  }
+}
