@@ -1,12 +1,12 @@
 $layout-name: "l-main";
 
 .#{$layout-name} {
-  background-color: $webfatorial-white;
   border-radius: rem-calc(6);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 0, 0, 0.1);
   display: flex;
   height: rem-calc(432); // 16:9
   margin: auto;
   padding: $global-module-size * 2;
+  position: relative;
   width: rem-calc(768); // 16:9
 }

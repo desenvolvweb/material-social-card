@@ -4,13 +4,12 @@ $component-name: "c-button";
   background-color: $dpw-secondary;
   border-radius: $global-module-size;
   color: $webfatorial-white;
-  margin-top: $global-module-size;
+  display: inline-block;
   max-width: rem-calc(210);
-  padding: rem-calc(9);
+  padding: rem-calc(9) rem-calc(15);
   text-align: center;
   text-decoration: none;
   transition: all 90ms ease-in;
-  width: auto;
 
   &:hover {
     background-color: $dpw-primary;

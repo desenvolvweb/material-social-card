@@ -1,10 +1,72 @@
 $component-name: "c-card";
 
 .#{$component-name} {
+  background-color: $webfatorial-white;
+  border-radius: rem-calc(6);
+  color: $webfatorial-white;
   display: flex;
   flex-direction: column;
   flex: 0.6;
+  height: 100%;
   justify-content: center;
+  left: 0;
+  padding: $global-module-size ($global-module-size * 2);
+  position: absolute;
+  top: 0;
+  transition: all $transition-duration-entrance ease-in;
+  width: 100%;
+
+  &.active {
+    clip-path: circle(100%);
+  }
+
+  &--index {
+    color: $text-color;
+  }
+
+  &--instagram {
+    background-color: $instagram-color;
+    clip-path: circle(0% at 600px 90%);
+
+    .c-button {
+      background-color: #4f5bd5;
+
+      &:hover {
+        background-color: lighten(#4f5bd5, 5%);
+      }
+    }
+  }
+
+  &--linkedin {
+    background-color: $linkedin-color;
+    clip-path: circle(0% at rem-calc(660) 90%);
+
+    .c-button {
+      background-color: $webfatorial-white;
+      color: $text-color;
+
+      &:hover {
+        background-color: darken($webfatorial-white, 15%);
+      }
+    }
+  }
+
+  &--twitter {
+    background-color: $twitter-color;
+    clip-path: circle(0% at rem-calc(725) 90%);
+
+    .c-button {
+      background-color: $webfatorial-white;
+      color: $text-color;
+
+      &:hover {
+        background-color: darken($webfatorial-white, 10%);
+      }
+    }
+  }
+
+  &__content {
+  }
 
   &__title {
     font-weight: normal;
@@ -22,7 +84,6 @@ $component-name: "c-card";
 
   &__explanation {
     line-height: 1.6;
-    margin-bottom: 0;
-    margin-top: $global-module-size;
+    margin: $global-module-size 0;
   }
 }
