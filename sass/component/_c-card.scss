@@ -1,7 +1,6 @@
 $component-name: "c-card";
 
 .#{$component-name} {
-  background-color: $webfatorial-white;
   border-radius: rem-calc(6);
   color: $webfatorial-white;
   display: flex;
@@ -13,20 +12,28 @@ $component-name: "c-card";
   padding: $global-module-size ($global-module-size * 2);
   position: absolute;
   top: 0;
-  transition: all $transition-duration-entrance ease-in;
+  transition: all $transition-duration-complex ease-in;
   width: 100%;
 
-  &.active {
+  &.is-active {
     clip-path: circle(100%);
+    transition-delay: 0s;
+    z-index: z-index(default);
+  }
+
+  &:not(.is-active) {
+    transition-delay: $transition-duration-exit;
   }
 
   &--index {
+    background-color: $webfatorial-white;
     color: $text-color;
+    clip-path: circle(0% at rem-calc(720) 10%);
   }
 
   &--instagram {
     background-color: $instagram-color;
-    clip-path: circle(0% at 600px 90%);
+    clip-path: circle(0% at rem-calc(600) 90%);
 
     .c-button {
       background-color: #4f5bd5;

@@ -14,6 +14,7 @@ $component-name: "c-menu";
 
   &__item {
     margin-left: $global-module-size / 2;
+    z-index: z-index(dropdown);
 
     &--index {
       position: absolute;
@@ -31,10 +32,19 @@ $component-name: "c-menu";
     padding: 0;
     height: rem-calc(30);
     width: rem-calc(48);
-    z-index: z-index(default);
+    transition: all $transition-duration-fast ease-in;
 
     &:active {
       transform: translateY(rem-calc(1.5));
+    }
+
+    &.is-active {
+      fill: $webfatorial-white;
+      pointer-events: none;
+    }
+
+    > * {
+      pointer-events: none;
     }
 
     svg {
